@@ -10,12 +10,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PointOperatorTest {
     @Test
+
     void translate2D() {
         Double[] point2D = new Double[] {1.0, 2.0};
         PointOperator.translate(point2D, new Double[] {1.0, 1.0});
 
         assertArrayEquals(new Double[] {2.0, 3.0}, point2D);
     }
+
 
     @Test
     void anyDimensionTranslate() {

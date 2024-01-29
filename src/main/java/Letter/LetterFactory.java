@@ -17,7 +17,10 @@ public final class LetterFactory {
      * @return BaseShape containing the letter A
      */
     public static BaseShape create_A()  {
-        return null;
+        Circle r1 = new Circle(halfMaxHeight);
+        Rectangle r2 = new Rectangle(halfStripeThickness, maxHeight);
+        return r1;
+
     }
 
     /** TODO
@@ -25,7 +28,7 @@ public final class LetterFactory {
      * @return BaseShape containing the letter B
      */
     public static BaseShape create_B() {
-        return null;
+        return  new Rectangle(halfStripeThickness, maxHeight);
     }
 
     /** TODO
@@ -33,7 +36,7 @@ public final class LetterFactory {
      * @return BaseShape containing the letter C
      */
     public static BaseShape create_C() {
-        return null;
+        return  new Rectangle(halfStripeThickness, maxHeight);
     }
 
     /** TODO
@@ -41,7 +44,7 @@ public final class LetterFactory {
      * @return BaseShape containing the letter E
      */
     public static BaseShape create_E() {
-        return null;
+        return  new Rectangle(halfStripeThickness, maxHeight);
     }
 
     /** TODO
@@ -49,7 +52,7 @@ public final class LetterFactory {
      * @return BaseShape containing the letter H
      */
     public static BaseShape create_H() {
-        return null;
+        return  new Rectangle(halfStripeThickness, maxHeight);
     }
 
     /** TODO
@@ -57,7 +60,7 @@ public final class LetterFactory {
      * @return BaseShape containing the letter N
      */
     public static BaseShape create_N() {
-        return null;
+        return  new Rectangle(halfStripeThickness, maxHeight);
     }
 
     /** TODO
@@ -65,7 +68,7 @@ public final class LetterFactory {
      * @return BaseShape containing the letter O
      */
     public static BaseShape create_O() {
-        return null;
+        return  new Rectangle(halfStripeThickness, maxHeight);
     }
 
 }
