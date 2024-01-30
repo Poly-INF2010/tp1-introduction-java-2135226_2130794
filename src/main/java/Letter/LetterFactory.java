@@ -44,7 +44,23 @@ public final class LetterFactory {
      * @return BaseShape containing the letter B
      */
     public static BaseShape create_B() {
-        return  new Rectangle(halfMaxWidth, maxHeight);
+        Ellipse ellipse1 = new Ellipse(maxWidth, halfMaxHeight);
+        Ellipse ellipse2 = new Ellipse(halfMaxWidth, halfMaxHeight/2);
+        Ellipse ellipse3 = new Ellipse(maxWidth, halfMaxHeight);
+        Ellipse ellipse4 = new Ellipse(halfMaxWidth, halfMaxHeight/2);
+        Rectangle rectangle1 = new Rectangle(halfStripeThickness, maxHeight);
+
+        Point2d point1 = new Point2d(15.0, 73.0);
+        Point2d point2 = new Point2d(15.0, 73.0);
+        Point2d point3 = new Point2d(15.0, 20.0);
+        Point2d point4 = new Point2d(15.0, 20.0);
+
+        ellipse1.translate(ellipse1.getCoords(), point1);
+        ellipse2.translate(ellipse2.getCoords(), point2);
+        ellipse3.translate(ellipse3.getCoords(), point3);
+        ellipse4.translate(ellipse4.getCoords(), point4);
+
+        return rectangle1.add(ellipse1.remove(ellipse2).add(ellipse3.remove(ellipse4)));
     }
 
     /** TODO
