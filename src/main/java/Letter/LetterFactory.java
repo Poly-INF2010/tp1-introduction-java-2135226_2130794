@@ -56,7 +56,7 @@ public final class LetterFactory {
         Ellipse ellipse2 = new Ellipse(maxWidth, halfMaxHeight);
 
         Point2d point1 = new Point2d(-9.0, 0.0);
-        Point2d point2 = new Point2d(9.0, 0.0);
+        Point2d point2 = new Point2d(5.0, 0.0);
 
         ellipse1.translate(ellipse1.getCoords(), point1);
         ellipse2.translate(ellipse2.getCoords(), point2);
