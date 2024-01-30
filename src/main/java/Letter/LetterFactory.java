@@ -9,7 +9,7 @@ public final class LetterFactory {
     final static Double halfMaxHeight = maxHeight / 2;
     final static Double halfMaxWidth = maxWidth / 2;
     final static Double stripeThickness = maxHeight / 8;
-    final static Double halfStripeThickness = stripeThickness / 2;
+    final static Double halfStripeThickness = stripeThickness / 4;
 
 
     /** TODO
@@ -17,9 +17,25 @@ public final class LetterFactory {
      * @return BaseShape containing the letter A
      */
     public static BaseShape create_A()  {
-        Circle r1 = new Circle(halfMaxHeight);
-        Rectangle r2 = new Rectangle(halfStripeThickness, maxHeight);
-        return r1;
+        Rectangle rectangle1 = new Rectangle(halfStripeThickness, maxHeight);
+        Rectangle rectangle2 = new Rectangle(halfStripeThickness, maxHeight);
+        Rectangle rectangle3 = new Rectangle(stripeThickness, halfStripeThickness);
+
+
+        Point2d point1 = new Point2d(-15.0, 0.0);
+        Point2d point2 = new Point2d(15.0, 0.0);
+        Point2d point3 = new Point2d(0.0, 0.0);
+
+        double angle1 = Math.toRadians(8);
+        double angle2 = Math.toRadians(-8);
+
+        rectangle1.translate(rectangle1.getCoords(), point1);
+        rectangle1.rotate(rectangle1.getCoords(), angle1 );
+        rectangle2.translate(rectangle2.getCoords(), point2);
+        rectangle2.rotate(rectangle2.getCoords(), angle2 );
+        rectangle3.translate(rectangle3.getCoords(), point3);
+
+        return rectangle1.add(rectangle2).add(rectangle3);
 
     }
 
@@ -28,7 +44,7 @@ public final class LetterFactory {
      * @return BaseShape containing the letter B
      */
     public static BaseShape create_B() {
-        return  new Rectangle(halfStripeThickness, maxHeight);
+        return  new Rectangle(halfMaxWidth, maxHeight);
     }
 
     /** TODO
@@ -44,7 +60,21 @@ public final class LetterFactory {
      * @return BaseShape containing the letter E
      */
     public static BaseShape create_E() {
-        return  new Rectangle(halfStripeThickness, maxHeight);
+        Rectangle rectangle1 = new Rectangle(halfStripeThickness, maxHeight);
+        Rectangle rectangle2 = new Rectangle(stripeThickness, halfStripeThickness);
+        Rectangle rectangle3 = new Rectangle(stripeThickness, halfStripeThickness);
+        Rectangle rectangle4 = new Rectangle(stripeThickness, halfStripeThickness);
+
+        Point2d point1 = new Point2d(15.0, 0.0);
+        Point2d point2 = new Point2d(15.0, 73.0);
+        Point2d point3 = new Point2d(15.0, -72.0);
+
+        rectangle2.translate(rectangle2.getCoords(), point1);
+        rectangle3.translate(rectangle3.getCoords(), point2);
+        rectangle4.translate(rectangle4.getCoords(), point3);
+
+
+        return ((rectangle1.add(rectangle2)).add(rectangle3)).add(rectangle4);
     }
 
     /** TODO
@@ -52,7 +82,19 @@ public final class LetterFactory {
      * @return BaseShape containing the letter H
      */
     public static BaseShape create_H() {
-        return  new Rectangle(halfStripeThickness, maxHeight);
+        Rectangle rectangle1 = new Rectangle(stripeThickness, maxHeight);
+        Rectangle rectangle2 = new Rectangle(stripeThickness, maxHeight);
+        Rectangle rectangle3 = new Rectangle(stripeThickness, stripeThickness);
+
+        Point2d point1 = new Point2d(-20.0, 0.0);
+        Point2d point2 = new Point2d(20.0, 0.0);
+        Point2d point3 = new Point2d(0.0, 0.0);
+
+        rectangle1.translate(rectangle1.getCoords(), point1);
+        rectangle2.translate(rectangle2.getCoords(), point2);
+        rectangle3.translate(rectangle3.getCoords(), point3);
+
+        return rectangle1.add(rectangle2).add(rectangle3);
     }
 
     /** TODO
@@ -60,7 +102,20 @@ public final class LetterFactory {
      * @return BaseShape containing the letter N
      */
     public static BaseShape create_N() {
-        return  new Rectangle(halfStripeThickness, maxHeight);
+        Rectangle rectangle1 = new Rectangle(halfStripeThickness, maxHeight);
+        Rectangle rectangle2 = new Rectangle(halfStripeThickness, maxHeight);
+        Rectangle rectangle3 = new Rectangle(halfStripeThickness, maxHeight);
+
+
+        double angle = Math.toRadians(-9);
+        Point2d point1 = new Point2d(-12.0, 0.0);
+        Point2d point2 = new Point2d(12.0, 0.0);
+
+        rectangle1.translate(rectangle1.getCoords(), point1);
+        rectangle2.translate(rectangle2.getCoords(), point2);
+        rectangle3.rotate(rectangle3.getCoords(), angle);
+
+        return rectangle1.add(rectangle2).add(rectangle3);
     }
 
     /** TODO

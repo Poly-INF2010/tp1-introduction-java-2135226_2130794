@@ -40,5 +40,6 @@ public class Rectangle extends BaseShape {
      * @return Deep copy of the rectangle
      */
     @Override
-    public Rectangle clone() {return new Rectangle(this.getCoords());}
+    public Rectangle clone() {return new Rectangle(this.getCoords());
+    }
 }
